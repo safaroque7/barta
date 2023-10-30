@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\userController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,3 +42,6 @@ Route::get('edit-profile', function(){
 Route::get('/signout', function(){
     return view('login');
 });
+
+
+Route::post('/registrationUrl', [userController::class, 'registrationMethod'])->name('registrationRoute'); 
