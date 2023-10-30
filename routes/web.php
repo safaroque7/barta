@@ -36,3 +36,8 @@ Route::get('register', function(){
 Route::get('edit-profile', function(){
     return view('edit-profile');
 });
+
+// for signout
+Route::get('/signout', function(){
+    return view('login');
+});
