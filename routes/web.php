@@ -44,4 +44,4 @@ Route::get('/signout', function(){
 });
 
 
-Route::post('/registrationUrl', [userController::class, 'registrationMethod'])->name('registrationRoute'); 
+Route::post('/registrationUrl', [userController::class, 'registrationMethod'])->name('registrationRoute');
