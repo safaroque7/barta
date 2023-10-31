@@ -7,10 +7,13 @@ use Illuminate\Support\Facades\DB;
 
 class userController extends Controller
 {
-    public function registrationMethod()
+    public function registrationMethod(Request $request)
     {
         return DB::table("users")->insert([
-            "name"=> "",
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+            
         ]);
     }
 }
